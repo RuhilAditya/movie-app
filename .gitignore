@@ -1,0 +1,24 @@
+# Maven
+target/
+.classpath
+.project
+.settings/
+*.class
+
+# IDE
+.vscode/
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+*.jar
+*.war
+
+# Dependency
+/node_modules/
