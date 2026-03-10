@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   mysql:
     image: mysql:8.0
@@ -9,7 +7,7 @@ services:
       MYSQL_ROOT_PASSWORD: Aditya@123
       MYSQL_DATABASE: movieAppFinal
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - mysql_data:/var/lib/mysql
     healthcheck:
@@ -20,7 +18,9 @@ services:
       start_period: 30s
 
   app:
-    image: ruhiladitya/movie-app:latest
+    build:
+      context: ./movie-app
+      dockerfile: Dockerfile
     container_name: movie-app
     restart: unless-stopped
     ports:
